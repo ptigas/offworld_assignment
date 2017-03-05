@@ -262,7 +262,7 @@ def clear_monitor_files(training_dir):
 if __name__ == '__main__':
 
     #REMEMBER!: turtlebot_nn_setup.bash must be executed.
-    env = gym.make('GazeboFlatTurtlebotLidar-v0')
+    env = gym.make('GazeboFlatTurtlebotLidarNn-v0')
     outdir = '/tmp/gazebo_gym_experiments/'
 
     continue_execution = False
