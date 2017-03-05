@@ -70,13 +70,18 @@ class GazeboFlatTurtlebotLidarNnEnv(gazebo_env.GazeboEnv):
 
         state,done = self.calculate_observation(data)
 
+	if action == 0:
+		reward = 100
+	else :
+		reward = -100 
+	'''
         if not done:
             # Straight reward = 5, Max angle reward = 0.5
             reward = round(15*(max_ang_speed - abs(ang_vel) +0.0335), 2)
             # print ("Action : "+str(action)+" Ang_vel : "+str(ang_vel)+" reward="+str(reward))
         else:
             reward = -200
-
+	'''
         return np.asarray(state), reward, done, {}
 
     def _reset(self):

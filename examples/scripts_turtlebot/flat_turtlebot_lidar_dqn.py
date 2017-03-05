@@ -342,6 +342,7 @@ if __name__ == '__main__':
             action = deepQ.selectAction(qValues, explorationRate)
 
             newObservation, reward, done, info = env.step(action)
+	    print action, reward
 
             cumulated_reward += reward
             if highest_reward < cumulated_reward:
