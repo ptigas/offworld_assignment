@@ -4,6 +4,7 @@ import os
 import gym
 import matplotlib
 import matplotlib.pyplot as plt
+from matplotlib.pyplot import savefig
 import itertools
 import sys
 import argparse
@@ -77,9 +78,6 @@ class LivePlot(object):
             xx = np.linspace(0, len(data)-data_fix, 1000)
             plt.plot(xx, interp(xx), color='green', linewidth=3.5)        
 
-        # pause so matplotlib will display
-        # may want to figure out matplotlib animation or use a different library in the future
-        plt.pause(0.000001)
 
 def expand(lst, n):
     lst = [[i]*n for i in lst]
@@ -107,4 +105,4 @@ if __name__ == '__main__':
     else:
         plotter.plot(full=args.full, dots=args.dots, average=args.average, interpolated=args.interpolated)
 
-    pause()
+    savefig('data.pdf')

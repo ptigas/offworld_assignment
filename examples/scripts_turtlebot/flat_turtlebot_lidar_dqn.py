@@ -276,15 +276,15 @@ if __name__ == '__main__':
         #Each time we take a sample and update our weights it is called a mini-batch. 
         #Each time we run through the entire dataset, it's called an epoch.
         #PARAMETER LIST
-        epochs = 1000
-        steps = 10000
-        updateTargetNetwork = 10000
+        epochs = 100
+        steps = 100
+        updateTargetNetwork = 100
         explorationRate = 1
         minibatch_size = 64
         learnStart = 64
-        learningRate = 0.001
+        learningRate = 0.01
         discountFactor = 0.99
-        memorySize = 1000000
+        memorySize = 10000000
         network_inputs = 100
         network_outputs = 21
         network_structure = [1, 300]
